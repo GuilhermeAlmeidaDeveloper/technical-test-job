@@ -12,6 +12,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: sans-serif;
         }
 
         .box-container {
@@ -22,13 +23,18 @@
             align-items: center;
         }
 
+        .title-box {
+            display: flex;
+            align-items: flex-start;
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+
         .box {
             display: flex;
             flex-direction: row;
 
         }
-
-
 
         .iframe {
             height: 245px;
@@ -41,22 +47,24 @@
 
 <body>
     <div class="box-container">
-        <div class="box">
-            <iframe scrolling='no' class="iframe" src="./ex1.html" frameborder="0"></iframe>
-            <iframe scrolling='no' class="iframe" src="./ex1.html" frameborder="0"></iframe>
-            <iframe scrolling='no' class="iframe" src="./ex1.html" frameborder="0"></iframe>
-        </div>
+        <div>
+            <div class="title-box">
+                <h3 class="title">Conteúdo da Web</h3>
+            </div>
+            <div class="box">
+                <iframe scrolling='no' class="iframe" src="./ex1.html" frameborder="0"></iframe>
+                <iframe scrolling='no' class="iframe" src="./ex1.html" frameborder="0"></iframe>
+                <iframe scrolling='no' class="iframe" src="./ex1.html" frameborder="0"></iframe>
+            </div>
 
-        <div class="box">
-            <iframe scrolling='no' class="iframe" src="./ex1.html" frameborder="0"></iframe>
-            <iframe scrolling='no' class="iframe" src="./ex1.html" frameborder="0"></iframe>
-            <iframe scrolling='no' class="iframe" src="./ex1.html" frameborder="0"></iframe>
+            <div class="box">
+                <iframe scrolling='no' class="iframe" src="./ex1.html" frameborder="0"></iframe>
+                <iframe scrolling='no' class="iframe" src="./ex1.html" frameborder="0"></iframe>
+                <iframe scrolling='no' class="iframe" src="./ex1.html" frameborder="0"></iframe>
+            </div>
         </div>
 
     </div>
-
-
-
 
 </body>
 

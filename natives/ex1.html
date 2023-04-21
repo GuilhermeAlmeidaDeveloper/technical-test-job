@@ -12,41 +12,42 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: sans-serif;
         }
 
         .card-ad {
-            height: 245px;
-            width: 255px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
+            height: 245px;
+            width: 255px;
         }
 
         .image-container {
+            position: relative;
             height: 170px;
             width: 255px;
-            position: relative;
         }
 
-        .native-image {
-            background-size: cover;
-        }
 
         .text-container {
+            display: flex;
+            justify-content: center;
             height: 78px;
             width: 255px;
+            padding-top: 8px;
         }
 
         .text-content {
             font-size: 16px;
             width: 255px;
-            word-break: break-all
+            word-break: break-all;
+            font-weight: 500;
         }
 
-        .categoria {
+        .category-span {
             position: absolute;
-            background-color: aquamarine;
+            background-color: #87ECFA;
             bottom: 7px;
             left: 7px;
             color: white;
@@ -62,13 +63,12 @@
 <body>
 
 
-
     <script>
 
-        async function loadJson(nAleatorio) {
-            let req = await fetch('data.json')
-            let result = await req.json();
-            let natives = result.natives
+        async function loadJson(randomNumber) {
+            const req = await fetch('data.json')
+            const result = await req.json();
+            const natives = result.natives
 
             const container = document.createElement('div')
             container.classList.add('card-ad')
@@ -77,15 +77,15 @@
 
             const image = document.createElement('div')
             image.classList.add('image-container')
-            image.style.backgroundImage = `url(${natives[nAleatorio].urlImage})`
+            image.style.backgroundImage = `url(${natives[randomNumber].urlImage})`
             container.appendChild(image)
 
-            const categoria = document.createElement('div')
-            categoria.classList.add('categoria')
-            image.appendChild(categoria)
+            const category = document.createElement('div')
+            category.classList.add('category-span')
+            image.appendChild(category)
 
-            const categorytext = document.createTextNode(`${natives[nAleatorio].category}`);
-            categoria.appendChild(categorytext)
+            const categorytext = document.createTextNode(`${natives[randomNumber].category}`);
+            category.appendChild(categorytext)
 
 
             const text = document.createElement('div');
@@ -94,13 +94,13 @@
 
             const textcontent = document.createElement('h4')
             textcontent.classList.add('text-content')
-            textcontent.textContent = `${natives[nAleatorio].title}`
+            textcontent.textContent = `${natives[randomNumber].title}`
             text.appendChild(textcontent)
 
         }
 
-        const nAleatorio = Math.floor(Math.random() * 10) + 1
-        loadJson(nAleatorio)
+        const randomNumber = Math.floor(Math.random() * 10) + 1
+        loadJson(randomNumber)
 
     </script>
 </body>
