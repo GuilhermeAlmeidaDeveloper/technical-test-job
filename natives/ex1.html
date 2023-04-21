@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natives</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 245px;
+            width: 255px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .image-container {
+            height: 170px;
+            width: 255px;
+            position: relative;
+        }
+
+        .native-image {
+            background-size: cover;
+        }
+
+        .text-container {
+            height: 78px;
+            width: 255px;
+        }
+
+        .text-content {
+            font-size: 20px;
+            width: 255px;
+            word-break: break-all
+        }
+
+        .categoria {
+            position: absolute;
+            background-color: aquamarine;
+            bottom: 7px;
+            left: 7px;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+
+    <script>
+
+        async function loadJson() {
+            let req = await fetch('teste.json')
+            let result = await req.json();
+            let natives = result.natives
+
+            const nAleatorio = Math.floor(Math.random() * 10) + 1
+
+            console.log(natives[nAleatorio].title);
+
+            const container = document.createElement('div')
+            container.classList.add('container')
+            document.body.appendChild(container)
+
+
+            const image = document.createElement('div')
+            image.classList.add('image-container')
+            image.style.backgroundImage = `url(${natives[nAleatorio].urlImage})`
+            container.appendChild(image)
+
+            const categoria = document.createElement('div')
+            categoria.classList.add('categoria')
+            image.appendChild(categoria)
+
+            const categorytext = document.createTextNode(`${natives[nAleatorio].category}`);
+            categoria.appendChild(categorytext)
+
+
+            const text = document.createElement('div');
+            text.classList.add('text-container');
+            container.appendChild(text)
+
+            const textcontent = document.createElement('h1')
+            textcontent.classList.add('text-content')
+            textcontent.textContent = `${natives[nAleatorio].title}`
+            text.appendChild(textcontent)
+
+        }
+        loadJson()
+
+    </script>
+</body>
+
+</html>
