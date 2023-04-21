@@ -14,12 +14,13 @@
             padding: 0;
         }
 
-        .container {
+        .card-ad {
             height: 245px;
             width: 255px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
         }
 
         .image-container {
@@ -38,7 +39,7 @@
         }
 
         .text-content {
-            font-size: 20px;
+            font-size: 16px;
             width: 255px;
             word-break: break-all
         }
@@ -64,17 +65,13 @@
 
     <script>
 
-        async function loadJson() {
-            let req = await fetch('teste.json')
+        async function loadJson(nAleatorio) {
+            let req = await fetch('data.json')
             let result = await req.json();
             let natives = result.natives
 
-            const nAleatorio = Math.floor(Math.random() * 10) + 1
-
-            console.log(natives[nAleatorio].title);
-
             const container = document.createElement('div')
-            container.classList.add('container')
+            container.classList.add('card-ad')
             document.body.appendChild(container)
 
 
@@ -95,13 +92,15 @@
             text.classList.add('text-container');
             container.appendChild(text)
 
-            const textcontent = document.createElement('h1')
+            const textcontent = document.createElement('h4')
             textcontent.classList.add('text-content')
             textcontent.textContent = `${natives[nAleatorio].title}`
             text.appendChild(textcontent)
 
         }
-        loadJson()
+
+        const nAleatorio = Math.floor(Math.random() * 10) + 1
+        loadJson(nAleatorio)
 
     </script>
 </body>
