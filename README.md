@@ -1,5 +1,5 @@
 
-#         Admission Tecnical Test
+#         Admission Technical Test
 
 Admission Tecnical Test from ***
 
