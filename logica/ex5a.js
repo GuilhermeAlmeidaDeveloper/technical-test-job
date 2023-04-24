@@ -3,10 +3,9 @@ function createElementList() {
     const allElementsArray = Array.from(NodeListElements);
     const elementsSelectedList = allElementsArray.filter((item) => {
         if (item.title && item.dataset.productSku % 3 === 0) {
-            return item
-        }
-    })
+            return item;
+        };
+    });
     console.log(elementsSelectedList);
 }
-
-createElementList()
+createElementList();

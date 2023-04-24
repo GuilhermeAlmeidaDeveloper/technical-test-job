@@ -23,6 +23,17 @@
             width: 255px;
         }
 
+        .card-ad.ad1 {
+            color: red;
+        }
+
+        .card-ad.ad2 {
+            color: blue;
+        }
+
+        .card-ad.ad1 .category-span {
+            background-color: green;
+        }
 
         .image-container {
             position: relative;
@@ -66,7 +77,9 @@
 
     <script>
 
-        const randomNumber = Math.floor(Math.random() * 10) + 1
+        function randomClass() {
+            return 'ad1'
+        }
 
         async function loadCard(randomNumber) {
             const req = await fetch('data.json')
@@ -75,6 +88,7 @@
 
             const card = document.createElement('div')
             card.classList.add('card-ad')
+            card.classList.add(randomClass())
             document.body.appendChild(card)
 
             const image = document.createElement('div')
@@ -101,6 +115,8 @@
 
         }
 
+
+        const randomNumber = Math.floor(Math.random() * 10) + 1
         loadCard(randomNumber)
 
     </script>
