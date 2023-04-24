@@ -53,6 +53,15 @@
             padding: 5px;
             border-radius: 5px;
         }
+
+        .overlay {
+            opacity: 0.2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 
 </head>
@@ -93,9 +102,23 @@
             textcontent.textContent = `${natives[randomNumber].title}`;
             text.appendChild(textcontent);
 
-        }
+
+            const randomColors = ['red', 'blue', 'green', 'yellow', 'purple'];
+            const randomTextColor = randomColors[Math.floor(Math.random() * randomColors.length)];
+            const randomOverlayColor = randomColors[Math.floor(Math.random() * randomColors.length)];
+            const randomCategoryColor = randomColors[Math.floor(Math.random() * randomColors.length)];
+            const overlay = document.createElement('div');
+            overlay.classList.add('overlay')
+            overlay.style.backgroundColor = randomOverlayColor;
+            textcontent.style.color = randomTextColor;
+            category.style.backgroundColor = randomCategoryColor;
+            image.appendChild(overlay);
+
+        };
 
         loadCard(randomNumber);
+
+
 
     </script>
 </body>
