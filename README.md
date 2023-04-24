@@ -5,7 +5,7 @@ Admission Tecnical Test from ***
 
 ## Screenshots
 
-![App Screenshot](https://i.imgur.com/VRH64eL.png)
+![App Screenshot](https://i.imgur.com/ysNNQNd.png)
 ![App Screenshot](https://i.imgur.com/Rr91oCc.png)
 ![App Screenshot](https://i.imgur.com/zFrLf92.png)
 and more...
