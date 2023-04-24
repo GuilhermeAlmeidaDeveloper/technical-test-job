@@ -8,8 +8,8 @@ function productStep() {
             products = dataLayer[i].ecommerce.impressions;
         };
     };
-    for (const produto of products) {
-        productIDs.push(produto.id);
+    for (const product of products) {
+        productIDs.push(product.id);
     }
     itensLength = products.length;
     console.log(`Lista de ID's dos produtos exibidos: ${productIDs.toLocaleString()}`);
