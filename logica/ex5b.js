@@ -7,5 +7,4 @@ function getEvents() {
     };
     console.log(eventsSelectedlist);
 };
-
 getEvents();

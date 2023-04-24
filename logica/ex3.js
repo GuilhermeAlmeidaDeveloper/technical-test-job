@@ -9,7 +9,10 @@ const category = splitResource[0];
 
 const divsNotFoundedMsg = 'não há div’s disponíveis na página';
 
-function urlVerification(url) {
+function urlVerification() {
+
+
+
     if (url.includes('/home') || url === 'https://www.band.uol.com.br/') {
         console.log('Você está na categoria: Home');
         !divsAreaList ? console.log(divsNotFoundedMsg) : console.log(divsAreaArray);
@@ -26,7 +29,7 @@ function urlVerification(url) {
         };
     }
 };
-urlVerification(url);
+urlVerification();
 
 
 
