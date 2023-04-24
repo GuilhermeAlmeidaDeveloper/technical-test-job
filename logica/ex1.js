@@ -1,6 +1,6 @@
 function printNumbers() {
     for (let i = 1; i <= 100; i++) {
-        const print = "";
+        let print = "";
         if (i % 3 === 0 && i % 5 === 0) {
             print = "TechOps";
         } else if (i % 3 === 0) {
