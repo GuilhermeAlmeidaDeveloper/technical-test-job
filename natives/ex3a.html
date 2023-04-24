@@ -72,7 +72,7 @@
 
         const randomNumber = Math.floor(Math.random() * 10) + 1;
 
-        async function loadCard(randomNumber) {
+        async function loadCard() {
             const req = await fetch('data.json');
             const result = await req.json();
             const natives = result.natives;
@@ -115,8 +115,7 @@
             image.appendChild(overlay);
 
         };
-
-        loadCard(randomNumber);
+        loadCard();
 
 
 
