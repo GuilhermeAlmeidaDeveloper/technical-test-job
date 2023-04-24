@@ -24,9 +24,7 @@ function urlVerification(url) {
         if (url.includes('/noticias')) {
             !divsAreaList ? console.log(divsNotFoundedMsg) : console.log(divsAreaArray);
         };
-
     }
-
 };
 urlVerification(url);
 
