@@ -2,10 +2,8 @@ const divsAreaList = document.querySelectorAll('.ad-area');
 const divsAreaArray = Array.from(divsAreaList);
 
 const url = window.location.href;
-const splitUrl = url.split(".br/");
-const urlResource = splitUrl[1];
-const splitResource = urlResource.split("/");
-const category = splitResource[0];
+const urlResource = url.split(".br/")[1];
+const category = urlResource.split("/")[0];
 
 const divsNotFoundedMsg = 'não há div’s disponíveis na página';
 
