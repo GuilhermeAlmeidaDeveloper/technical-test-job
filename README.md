@@ -1,7 +1,7 @@
 
 #         Admission Technical Test
 
-Admission Tecnical Test from ***
+Admission Technical Test from ***
 
 ## Screenshots
 
