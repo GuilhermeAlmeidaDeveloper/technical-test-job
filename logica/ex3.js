@@ -1,5 +1,5 @@
-let divsAreaList = document.querySelectorAll('.ad-area');
-let divsAreaArray = Array.from(divsAreaList);
+const divsAreaList = document.querySelectorAll('.ad-area');
+const divsAreaArray = Array.from(divsAreaList);
 
 const url = window.location.href;
 const splitUrl = url.split(".br/");
