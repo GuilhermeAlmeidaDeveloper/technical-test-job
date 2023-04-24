@@ -8,13 +8,10 @@ function productStep() {
             produtos = dataLayer[i].ecommerce.impressions;
         };
     };
-
     for (const produto of produtos) {
-        productIDs.push(produto.id)
+        productIDs.push(produto.id);
     }
-
-    itensLength = produtos.length
-
+    itensLength = produtos.length;
     console.log(`Lista de ID's dos produtos exibidos: ${productIDs.toLocaleString()}`);
     console.log(`Total de itens exibidos: ${itensLength}`);
 };
